@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# macOS system
+.DS_Store
+
+# uv cache
+.uv_cache/
+uv.lock.old
+
+# Temporary results
+results/
+*.png
+*.jsonl
+*.pt
+*.pth
+*.ckpt
+
+# IDEs
+.vscode/
+.idea/
