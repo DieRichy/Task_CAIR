@@ -6,12 +6,27 @@ This repository reproduces the core uncertainty estimation experiments from **"E
 
 Accurate indication of an LLM's generation confidence is critical, especially in high-stakes scenarios like medical applications. This project implements a **training-free** pipeline to estimate the uncertainty of LLM/VLM generations using internal model signals.
 
-Core Metrics Implemented:
+## 🔬 Core Metrics Implemented
 
-1. **Logprob**: The logarithmic probability of the first generated token, used as a baseline for uncertainty.
+### 1. **Logprob**
+The logarithmic probability of the first generated token, used as a baseline for uncertainty.
 
-2. **Logtoku**: The advanced uncertainty metric derived from the reference paper.
+### 2. **Logtoku**
+The advanced uncertainty metric derived from the reference paper, which incorporates evidence-based estimation.
 
+## 📊 Application: Reliability Estimation
+
+Based on **Section 5: APPLICATION II: RELIABILITY ESTIMATION** of the reference paper:
+
+The reliability of a token is represented as:
+
+\[
+R(a_t) = -\text{AU}(a_t) \cdot \text{EU}(a_t)
+\]
+
+Where:
+- \(\text{AU}(a_t)\) represents Aleatoric Uncertainty
+- \(\text{EU}(a_t)\) represents Epistemic Uncertainty
 ---
 
 ## 📂 Document Structure
@@ -68,8 +83,10 @@ Note: You can trim datasets (e.g., first 100 rows) for faster inference.
 The core evaluation method is **Selective Generation (Accuracy vs. Keep Rate)**. By rejecting samples with high uncertainty, the model's precision on the remaining samples should increase.
 
 My Example:
-
+Figure 1 2000 examples:
 <img width="936" height="1076" alt="2000samples_test" src="https://github.com/user-attachments/assets/18fc55dd-31e8-4c55-b4f8-76912b4a81dc" />
+Figure 2 500 examples:
+<img width="2813" height="3569" alt="500samples_test" src="https://github.com/user-attachments/assets/e32c092e-b79d-40fa-b7f6-7baeb78434fc" />
 
 Key Findings:
 * **No Rejection**: Accuracy are highest when no rejection 
