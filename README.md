@@ -8,23 +8,15 @@ Accurate indication of an LLM's generation confidence is critical, especially in
 
 Core Metrics Implemented:
 
-1. 
-**Logprob**: The logarithmic probability of the first generated token, used as a baseline for uncertainty.
+1. **Logprob**: The logarithmic probability of the first generated token, used as a baseline for uncertainty.
 
-
-2. 
-****: The advanced uncertainty metric derived from the reference paper.
-
+2. **Logtoku**: The advanced uncertainty metric derived from the reference paper.
 
 ---
 
 ## 📂 Document Structure
 
-* 
-`src/metrics.py`: Metric calculation functions based on the original [Logtoku implementation](https://github.com/MaHuanAAA/logtoku/blob/main/SenU/metrics.py).
-
-
-
+* `src/metrics.py`: Metric calculation functions based on the original [Logtoku implementation](https://github.com/MaHuanAAA/logtoku/blob/main/SenU/metrics.py).
 ---
 
 ## 🛠️ Environment Setup
@@ -55,8 +47,7 @@ uv sync
 
 The pipeline supports various LLMs/VLMs. By default, it is configured for:
 
-* 
-`Qwen2.5-3B-Instruct` 
+*`Qwen2.5-3B-Instruct`
 
 
 ### 2. Running Inference & Evaluation
