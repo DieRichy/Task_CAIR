@@ -13,9 +13,6 @@ The logarithmic probability of the first generated token, used as a baseline for
 
 ### 2. **Logtoku**
 The advanced uncertainty metric derived from the reference paper, which incorporates evidence-based estimation.
-
-## 📊 Application: Reliability Estimation
-
 Based on **Section 5: APPLICATION II: RELIABILITY ESTIMATION** of the reference paper:
 
 The reliability of a token is represented as:
