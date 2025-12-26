@@ -87,6 +87,7 @@ Figure 2: Performance with 500 Examples
 Figure 2: Uncertainty estimation results on 500 test samples
 
 </div>
+
 Key Findings:
 * **No Rejection**: Accuracy are highest when no rejection 
 * **95% Rejection**: Accuracy reaches lowest which closes to randomly guessing (the accuracy is only 50%)
