@@ -7,7 +7,7 @@ This repository reproduces the core uncertainty estimation experiments from **"E
 
 Accurate indication of an LLM's generation confidence is critical, especially in high-stakes scenarios like medical applications. This project implements a **training-free** pipeline to estimate the uncertainty of LLM/VLM generations using internal model signals.
 
-
+<pre>
 Task_CAIR/
 ├── src/                          # Main source code directory
 │   ├── evaluator/                # Evaluation-related modules
@@ -31,7 +31,7 @@ Task_CAIR/
 ├── uv.lock                       # uv virtual environment lock file
 ├── README.md                     # Project documentation
 └── .gitignore                    # Git ignore rules
-
+</pre>
 
 ## 🔬 Core Metrics Implemented
 
