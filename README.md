@@ -2,9 +2,35 @@
 
 This repository reproduces the core uncertainty estimation experiments from **"Estimating LLM Uncertainty with Evidence" (Ma et al., 2025)**.
 
-## 📖 Project Overview
+
+## 📖 Project Overview & Structure 
 
 Accurate indication of an LLM's generation confidence is critical, especially in high-stakes scenarios like medical applications. This project implements a **training-free** pipeline to estimate the uncertainty of LLM/VLM generations using internal model signals.
+
+##Task_CAIR/
+├── src/                          # Main source code directory
+│   ├── evaluator/                # Evaluation-related modules
+│   │   ├── __init__.py           # Makes evaluator a Python package
+│   │   ├── plotting.py           # Visualization functions
+│   │   └── scoring.py            # Logprob and Logtoku metric DataFrame functions
+│   │
+│   ├── dataset_loader.py         # Dataset loading and preprocessing (Default: BoolQ)
+│   ├── define_llm.py             # LLM model wrapper for uncertainty extraction and logits
+│   ├── main.py                   # Entry script for running experiments
+│   ├── metrics.py                # Core metric calculation (based on paper implementation)
+│   ├── prompt.py                 # Prompt templates using apply_chat_template()
+│   └── model_download.py         # Model download and management
+│
+├── results/                      # Output directory for experiment results
+│   ├── boolq_results.csv         # BoolQ task experimental results
+│   └── rejection_heatmap.png     # Visualization of uncertainty rejection curves
+│
+├── requirements.txt              # Python dependencies
+├── pyproject.toml                # Project metadata and build configuration
+├── uv.lock                       # uv virtual environment lock file
+├── README.md                     # Project documentation
+└── .gitignore                    # Git ignore rules
+
 
 ## 🔬 Core Metrics Implemented
 
