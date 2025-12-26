@@ -19,9 +19,7 @@ The advanced uncertainty metric derived from the reference paper, which incorpor
 Based on **Section 5: APPLICATION II: RELIABILITY ESTIMATION** of the reference paper:
 
 The reliability of a token is represented as:
-$$
-R(a_t) = -\text{AU}(a_t) \cdot \text{EU}(a_t)
-$$
+$$R(a_t) = -\text{AU}(a_t) \cdot \text{EU}(a_t)$$
 
 Where:
 - $\text{AU}(a_t)$ represents Aleatoric Uncertainty
