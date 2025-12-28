@@ -102,18 +102,13 @@ Note: You can trim datasets (e.g., first 100 rows) for faster inference.
 
 The core evaluation method is **Selective Generation (Accuracy vs. Keep Rate)**. By rejecting samples with high uncertainty, the model's precision on the remaining samples should increase.
 
-Figure 1: Performance with 2000 Examples
+Figure 1: Performance with 1200 Examples
 
-<div align="center"><img width="936" height="1076" alt="2000 samples test" src="https://github.com/user-attachments/assets/18fc55dd-31e8-4c55-b4f8-76912b4a81dc" />
-Figure 1: Uncertainty estimation results on 2000 test samples
+<img width="2840" height="3569" alt="rejection_heatmap" src="https://github.com/user-attachments/assets/714b14ab-21bb-452b-90a5-794954ecf9dc" />
 
-</div>
-Figure 2: Performance with 500 Examples
+Figure 1: Uncertainty estimation results on 1200 test samples
 
-<div align="center"><img width="2813" height="3569" alt="500 samples test" src="https://github.com/user-attachments/assets/e32c092e-b79d-40fa-b7f6-7baeb78434fc" />
-Figure 2: Uncertainty estimation results on 500 test samples
 
-</div>
 
 Key Findings:
 * **No Rejection**: Accuracy are highest when no rejection 
