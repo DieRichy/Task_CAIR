@@ -9,8 +9,10 @@ def main():
     # Load model and tokenizer
     model, tokenizer = load_model()
     model_name="Qwen/Qwen2.5-3B-Instruct"
-    # Load samples from BoolQ validation set
-    loader = BoolQLoader(model_name=model_name, split="validation", num_samples=2000)
+    # Load samples from BoolQ / CQA validation set
+    # loader = BoolQLoader(model_name=model_name, split="validation", num_samples=2000)
+    # or #
+    loader = CommonsenseQALoader(model_name=model_name, split="validation", num_samples=1200) # commonsenseQA validation has 1.22k rows
     data = loader.get_data()
     #initialize result list
     all_result = []
@@ -39,7 +41,7 @@ def main():
         })
     #2. save data to dataframe
     df = pd.DataFrame(all_result)
-    df.to_csv("results/boolq_results.csv", index=False)
+    df.to_csv("results/commonsense_results.csv", index=False)
 
     #3. calculate rejection metrics
     #3.1 logprob df
